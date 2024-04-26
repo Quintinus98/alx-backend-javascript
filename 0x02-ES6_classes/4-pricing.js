@@ -25,13 +25,13 @@ export default class Pricing {
 
   set currency(value) {
     if (Object.getPrototypeOf(value) !== Currency.prototype) {
-      throw TypeError('currency must be a Currency');
+      throw TypeError('Currency must be a Currency');
     }
     this._currency = value;
   }
 
   displayFullPrice() {
-    return `${this.amount} ${this.currency.name} ${this.currency.code}`;
+    return `${this.amount} ${this.currency.name} (${this.currency.code})`;
   }
 
   static convertPrice(amount, conversionRate) {
