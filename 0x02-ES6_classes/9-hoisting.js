@@ -52,12 +52,12 @@ export class StudentHolberton {
     this._holbertonClass = value;
   }
 
-  fullName() {
+  get fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
 
-  fullStudentDescription() {
-    return `${this.fullName()} - ${this.holbertonClass.year} - ${this.holbertonClass.location}`;
+  get fullStudentDescription() {
+    return `${this.fullName} - ${this.holbertonClass.year} - ${this.holbertonClass.location}`;
   }
 }
 
