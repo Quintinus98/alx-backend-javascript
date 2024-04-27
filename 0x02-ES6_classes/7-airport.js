@@ -21,6 +21,6 @@ export default class Airport {
   }
 
   toString() {
-    return `[object SFO]`
+    return '[object SFO]';
   }
 }
