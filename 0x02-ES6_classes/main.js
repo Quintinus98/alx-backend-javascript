@@ -1,5 +1,7 @@
-import Airport from "./7-airport.js";
+import EVCar from './100-evcar.js';
 
-const airportSF = new Airport('San Francisco Airport', 'SFO');
-console.log(airportSF);
-console.log(airportSF.toString());
+const ec1 = new EVCar("Tesla", "Turbo", "Red", "250");
+console.log(ec1);
+
+const ec2 = ec1.cloneCar();
+console.log(ec2);
