@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  if (!startString) return '';
+  if (!startString || !set || !(set instanceof Set) || typeof startString !== 'string') return '';
 
   const cleanedSet = [...set].map(
     (val) => (val.startsWith(startString)
