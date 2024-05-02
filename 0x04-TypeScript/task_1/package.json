@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+      "lint": "./node_modules/.bin/eslint --fix",
       "start-dev": "webpack-dev-server --open",
       "build": "webpack",
       "test": "jest"
