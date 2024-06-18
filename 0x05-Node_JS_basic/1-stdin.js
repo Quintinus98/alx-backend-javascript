@@ -10,5 +10,5 @@ readable.on('readable', () => {
   }
 });
 readable.on('end', () => {
-  console.log('This important software is now closing\n');
+  console.log('This important software is now closing');
 });
