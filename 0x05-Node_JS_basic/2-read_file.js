@@ -1,11 +1,13 @@
 const fs = require('fs');
 
 function countStudents(path) {
-  // read database synchronously
   try {
     const db = fs.readFileSync(path, { encoding: 'utf-8', flag: 'r' });
 
     const lines = db.split('\n').filter((line) => line.trim() !== '');
+    if (lines.length === 0) {
+      throw new Error('Cannot load the database');
+    }
     console.log(`Number of students: ${lines.length - 1}`);
 
     const fields = {};
