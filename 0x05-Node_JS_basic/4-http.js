@@ -3,7 +3,7 @@ const http = require('http');
 const host = 'localhost';
 const port = 1245;
 
-const app = http.createServer((req, res) => {
+const app = http.createServer((_req, res) => {
   const body = 'Hello Holberton School!';
   res.writeHead(200, {
     'Content-Length': Buffer.byteLength(body),
@@ -15,3 +15,5 @@ const app = http.createServer((req, res) => {
 app.listen(port, host, () => {
   console.log(`Server is running on http://${host}:${port}`);
 });
+
+module.exports = app;
